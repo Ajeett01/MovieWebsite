@@ -4,6 +4,7 @@ import SideItems from './SideItems';
 import axios from 'axios';
 import MovieGrid from './Movies';
 import data from './data';
+import Header from './Header';
 
 const URL =
   'https://api.themoviedb.org/3/movie/11?api_key=85ce1cb0dd35e6eed23e110608a236ae';
@@ -31,20 +32,26 @@ const Main = () => {
 
   console.log(data);
   return (
-    <Box>
-      <Container>
-        <Typography>Now Playing Movies</Typography>
-      </Container>
-      <div style={{display:'flex'}}>
-        <SideItems/>
-      <div style={{marginTop:100}}>
-        <MovieGrid movies={data} />
-      </div>
-      
-      </div>
-      
-    </Box>
+    <>
+      <Header />
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Container>
+          <Typography style={{marginTop:15,marginBottom:0}} variant="h6">Now Playing Movies</Typography>
+        </Container>
+        <div style={{ display: 'flex' }}>
+          <SideItems />
+          <div style={{ marginTop: 40 }}>
+            <MovieGrid movies={data} />
+          </div>
+        </div>
+      </Box>
+    </>
   );
 }
 
-export default Main
+export default Main;

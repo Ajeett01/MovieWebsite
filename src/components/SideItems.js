@@ -74,7 +74,11 @@ const SideItems = () => {
           display: 'flex',
           flexDirection: 'column',
           backgroundColor: 'white',
-          padding: 12,
+          // border: '1px solid rgba(0, 0, 0, 0.1)',
+          // boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+          marginLeft: 12,
+          marginRight: 5,
+          paddingTop: 5,
         }}
       >
         <Button
