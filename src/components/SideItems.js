@@ -74,21 +74,31 @@ const SideItems = () => {
           display: 'flex',
           flexDirection: 'column',
           backgroundColor: 'white',
-          padding: 16,
+          padding: 12,
         }}
       >
         <Button
           variant="outlined"
-          style={{ borderColor: 'black', color: 'black' }}
+          style={{
+            borderColor: 'black',
+            color: 'black',
+            marginBottom: 10,
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+          }}
         >
           Sort
-          <div style={{ display: 'flex', marginLeft: 50 }}>
+          <div style={{ display: 'flex' }}>
             <KeyboardArrowRightIcon />
           </div>
         </Button>
         <Button
           variant="outlined"
-          style={{ borderColor: 'black', color: 'black', marginBottom: 16 }}
+          style={{
+            borderColor: 'black',
+            color: 'black',
+            marginBottom: 16,
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+          }}
         >
           Where to Watch
           <div style={{ display: 'flex', marginLeft: 50 }}>
@@ -226,7 +236,7 @@ const SideItems = () => {
             ))}
           </Select>
         </FormControl>
-        <Typography variant="h6" style={{ marginTop:5 }}>
+        <Typography variant="h6" style={{ marginTop: 5 }}>
           Keywords
         </Typography>
         <InputBase
